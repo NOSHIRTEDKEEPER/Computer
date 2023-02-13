@@ -1,8 +1,9 @@
 #main
-class Main:
-    def __init__(self):
-        pass
+from classes.Main import Main
 
 
+
+##########_##########
 if __name__ == "__main__":
     Main()
+##########_##########
