@@ -1,4 +1,4 @@
-from classes.File_system import TreeNode
+from classes.File_system import *
 
 class Terminal:
     def __init__(self):
@@ -10,6 +10,7 @@ class Terminal:
         self.pre_cmdl = self.user + "@" + self.comp + self.BASHsymb
         self.cmd = input(self.pre_cmdl)
         self.check_command()
+        self.folder = root
 
     def check_command(self):
         index = 0
@@ -27,4 +28,5 @@ class Terminal:
 
     def process_command(self):
         print(str(self.cmd))
-        TreeNode.
+        if str(self.cmd) == "ls":
+            self.folder.ls()
