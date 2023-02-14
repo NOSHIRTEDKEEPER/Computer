@@ -6,40 +6,42 @@ class TreeNode:
         self.children = []
 
     def add_child(self, child_node):
-        print("Adding " + child_node.value)
         self.children.append(child_node)
 
     def remove_child(self, child_node):
-        print("Removing " + child_node.value + " from " + self.value)
         self.children = [child for child in self.children
                          if child is not child_node]
 
-    def traverse(self):
-        nodes_to_visit = [self]
-        while len(nodes_to_visit) > 0:
-            current_node = nodes_to_visit.pop()
-            print(current_node.value)
-            nodes_to_visit += current_node.children
+    def ls(self):
+        ind = 0
+        while ind < len(self.children):
+            node = self.children.pop()
+            print(node.value)
+
 
 
 root = TreeNode("/")
 a = TreeNode("bin/")
 b = TreeNode("boot/")
-c = TreeNode("dev")
-d = TreeNode("etc")
-e = TreeNode("home")
-f = TreeNode("lib")
-g = TreeNode("media")
-h = TreeNode("mnt")
-i = TreeNode("opt")
-j = TreeNode("proc")
-k = TreeNode("root")
-l = TreeNode("run")
-m = TreeNode("sbin")
-n = TreeNode("system")
-o = TreeNode("tmp")
-p = TreeNode("usr")
-q = TreeNode("var")
+c = TreeNode("dev/")
+d = TreeNode("etc/")
+e = TreeNode("home/")
+f = TreeNode("lib/")
+g = TreeNode("media/")
+h = TreeNode("mnt/")
+i = TreeNode("opt/")
+j = TreeNode("proc/")
+k = TreeNode("root/")
+l = TreeNode("run/")
+m = TreeNode("sbin/")
+n = TreeNode("system/")
+o = TreeNode("tmp/")
+p = TreeNode("usr/")
+q = TreeNode("var/")
+
+
+user = TreeNode("user")
+e.add_child(user)
 
 root.add_child(a)
 root.add_child(b)
@@ -59,9 +61,5 @@ root.add_child(o)
 root.add_child(p)
 root.add_child(q)
 
-root.traverse()
 
-
-class View_filesys:
-    def __init__(self, File_system):
-        self.filesys = File_system.stringify_list()
+root.ls()

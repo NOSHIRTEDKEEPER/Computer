@@ -1,3 +1,5 @@
+from classes.File_system import TreeNode
+
 class Terminal:
     def __init__(self):
         self.commands = ["ls", "pwd", "cd"]
@@ -25,3 +27,4 @@ class Terminal:
 
     def process_command(self):
         print(str(self.cmd))
+        TreeNode.
