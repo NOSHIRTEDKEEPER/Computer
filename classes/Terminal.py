@@ -7,4 +7,4 @@ class Terminal:
         cmd = input(self.pre_cmdl)
         self.process_command(cmd)
     def process_command(cmd,self):
-        print(cmd)
+        print(str(cmd))

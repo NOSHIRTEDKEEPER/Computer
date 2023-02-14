@@ -1,9 +1,9 @@
 #main
-from classes.Main import Main
+from classes.Terminal import Terminal
 
 
 
 ##########_##########
 if __name__ == "__main__":
-    Main()
+    Terminal()
 ##########_##########
