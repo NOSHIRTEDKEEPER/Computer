@@ -19,7 +19,6 @@ class TreeNode:
             print(node.value)
 
 
-
 root = TreeNode("/")
 a = TreeNode("bin/")
 b = TreeNode("boot/")
