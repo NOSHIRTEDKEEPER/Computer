@@ -18,6 +18,12 @@ class TreeNode:
             node = self.children.pop()
             print(node.value)
 
+    def parent(self):
+        self.parent()
+
+
+
+
 
 root = TreeNode("/")
 a = TreeNode("bin/")
