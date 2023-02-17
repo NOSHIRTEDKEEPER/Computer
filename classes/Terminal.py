@@ -3,7 +3,7 @@ from classes.File_system import *
 class Terminal:
     def __init__(self):
         self.folder = root
-        self.commands = ["ls", "pwd", "cd", "sudo su", "exit"]
+        self.commands = ["ls", "pwd", "cd", "sudo su", "exit", "clear"]
         self.user = "user"
         self.comp = "my_comp"
         self.BASHsymb = "$"
@@ -18,7 +18,6 @@ class Terminal:
             if self.commands[index] in str(self.cmd):
                 self.process_command()
 
-
             index = index + 1
 
         else:
@@ -26,10 +25,14 @@ class Terminal:
                 self.cmd = input(self.pre_cmdl)
                 self.check_command()
 
-            else:
+################ below statement ###################################
+
+            elif self.cmd != "clear" or "cd":
                 print(str(self.cmd) + " is not a valid command.")
                 self.cmd = input(self.pre_cmdl)
                 self.check_command()
+
+################# end problem #########################
 
     def process_command(self):
         if str(self.cmd) == "ls":
@@ -72,3 +75,15 @@ class Terminal:
             self.pre_cmdl = self.user + "@" + self.comp + self.BASHsymb
             self.cmd = input(self.pre_cmdl)
             self.check_command()
+
+        elif str(self.cmd) == "clear":
+            print("\t")
+            print("\t")
+            print("\t")
+            print("\t")
+            print("\t")
+            print("\t")
+            print("\t")
+            print("\t")
+            print("\t")
+            print("\t")

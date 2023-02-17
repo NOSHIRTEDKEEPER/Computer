@@ -1,5 +1,4 @@
 
-
 class TreeNode:
     def __init__(self, value):
         self.value = value
@@ -65,6 +64,3 @@ root.add_child(n)
 root.add_child(o)
 root.add_child(p)
 root.add_child(q)
-
-
-
