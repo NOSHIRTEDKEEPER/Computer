@@ -20,17 +20,17 @@ class Terminal:
 
             index = index + 1
 
-
-        if self.cmd == "":
-            self.cmd = input(self.pre_cmdl)
-            self.check_command()
+        else:
+            if self.cmd == "":
+                self.cmd = input(self.pre_cmdl)
+                self.check_command()
 
 ################ below statement ###################################
 
-        elif self.cmd != "clear" or "cd":
-            print(str(self.cmd) + " is not a valid command.")
-            self.cmd = input(self.pre_cmdl)
-            self.check_command()
+            elif self.cmd != "clear" or "cd":
+                print(str(self.cmd) + " is not a valid command.")
+                self.cmd = input(self.pre_cmdl)
+                self.check_command()
 
 ################# end problem #########################
 
