@@ -1,9 +1,10 @@
+import classes.yt
 from classes.File_system import *
 
 class Terminal:
     def __init__(self):
         self.folder = root
-        self.commands = ["ls", "pwd", "cd", "sudo su", "exit", "clear"]
+        self.commands = ["ls", "pwd", "cd", "sudo su", "exit", "clear", "yt"]
         self.user = "user"
         self.comp = "my_comp"
         self.BASHsymb = "$"
@@ -87,3 +88,5 @@ class Terminal:
             print("\t")
             print("\t")
             print("\t")
+        elif str(self.cmd) == "yt":
+            classes.yt.YoutubeDownloader()
